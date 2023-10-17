@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class DataStructureExample {
+    public static void main(String[] args) {
+        ArrayList<String> dataList = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter data (type 'exit' to quit):");
+
+        while (true) {
+            String input = scanner.nextLine();
+
+            if (input.equalsIgnoreCase("exit")) {
+                break;
+            }
+
+            dataList.add(input);
+        }
+
+        System.out.println("Data entered:");
+
+        for (String data : dataList) {
+            System.out.println(data);
+        }
+
+        scanner.close();
+    }
+}
